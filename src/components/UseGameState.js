@@ -14,7 +14,7 @@ const UseGameState = () => {
             }, 1000);
             return () => clearTimeout(timerId);
         }
-    });
+    }, [availableNums.length, secondsLeft]);
 
     const setGameState = (newCandidateNums) => {
         if (utils.sum(newCandidateNums) !== stars) {
